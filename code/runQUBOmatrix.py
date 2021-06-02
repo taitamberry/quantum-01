@@ -17,7 +17,7 @@ sampleset = sampler.sample(bqm, num_reads = 1000)
 #print(sampleset)
 
 print("step4: saving results")
-df_results = SampleSet.to_pandas_dataframe()
+df_results = sampleset.to_pandas_dataframe()
 writer = pd.ExcelWriter('output.xlsx')
 df_results.to_excel(writer)
 writer.save()
